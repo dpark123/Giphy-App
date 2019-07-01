@@ -34,7 +34,7 @@ $("#find-gif").on("click", function (event) {
         var p = $("<p>").text("Rating: " + rating);
 
         var newGif = $("<img>");
-        newGif.attr("src", results[i].images.fixed_height.url);
+        newGif.attr("src", results[i].images.fixed_height_still.url);
 
         gifDiv.prepend(newGif);
         gifDiv.prepend(p);
@@ -86,13 +86,14 @@ $("#gifs-view").on("click", 'button',function (event) {
         gifDiv.prepend(newGif);
         gifDiv.prepend(p);
 
-        $("#gifDisplay").append(gifDiv);
+        $("#gifDisplay").prepend(gifDiv);
       }
-
     });
-
-
+    
 })
+
+
+
 
 //$(document).on("click", ".goBack", savedGif);
 //renderButtons();
