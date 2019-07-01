@@ -34,12 +34,12 @@ $("#find-gif").on("click", function (event) {
         var p = $("<p>").text("Rating: " + rating);
 
         var newGif = $("<img>");
-        newGif.attr("src", results[i].images.fixed_height_still.url);
+        newGif.attr("src", results[i].images.fixed_height.url);
 
         gifDiv.prepend(newGif);
         gifDiv.prepend(p);
 
-        $("#gifDisplay").append(gifDiv);
+        $("#gifDisplay").prepend(gifDiv);
       }
 
       if (results.length > 0) {
